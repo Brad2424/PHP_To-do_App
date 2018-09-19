@@ -1,0 +1,28 @@
+main {
+    flex: 1; //to push the footer to the bottom
+}
+main .pageWrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    @include mq(large) {
+        flex-direction: row;
+        order: 1;
+    }
+}
+
+#signupForm {
+    flex: 1;
+    @include mq(large) {
+        order: 1;
+    }
+}
+#homeQuote {
+    flex: 1;
+    blockquote, cite {
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+}

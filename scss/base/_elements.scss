@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; //to push the footer to the bottom
+}
+body {
+    display: flex; //to push the footer to the bottom
+    flex-direction: column;
+}
+form {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto;
+    fieldset {
+        border: none;
+        margin: 10px;
+    }
+}
+fieldset > div {
+    margin: 10px;
+}
+
+.blockQuote {
+    width: 70%;
+    margin: 0 auto;
+}
+.pageWrap {
+    width: 95%;
+    margin: 0 auto;
+}

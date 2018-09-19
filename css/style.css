@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column; }
+
+form {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 70%;
+  margin: 0 auto; }
+  form fieldset {
+    border: none;
+    margin: 10px; }
+
+fieldset > div {
+  margin: 10px; }
+
+.blockQuote {
+  width: 70%;
+  margin: 0 auto; }
+
+.pageWrap {
+  width: 95%;
+  margin: 0 auto; }
+
+main {
+  flex: 1; }
+
+main .pageWrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center; }
+  @media (min-width: 1200px) {
+    main .pageWrap {
+      flex-direction: row;
+      order: 1; } }
+
+#signupForm {
+  flex: 1; }
+  @media (min-width: 1200px) {
+    #signupForm {
+      order: 1; } }
+
+#homeQuote {
+  flex: 1; }
+  #homeQuote blockquote, #homeQuote cite {
+    width: 70%;
+    margin: 0 auto;
+    display: block; }
+
+header {
+  border-bottom: 1px black solid; }
+  header span {
+    padding: 10px;
+    display: inline-block; }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right; }
+  nav ul li {
+    display: inline; }
+    nav ul li a {
+      display: inline-block;
+      padding: 10px; }
+
+footer {
+  border-top: 1px black solid;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
