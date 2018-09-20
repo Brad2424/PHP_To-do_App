@@ -36,8 +36,8 @@
                         <input type="text" id="username" placeholder="Required" name="username" required>
                     </div>
                     <div>
-                        <label for="confirmed_password">Password:</label>
-                        <input type="password" id="confirmed_password" placeholder="Required" name="confirmed_password" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Required" name="password" required>
                     </div>
                     <button type="submit" name="login_user">Login</button>
                     <p>Not yet a user? <a href="register.php">Register</a></p>
