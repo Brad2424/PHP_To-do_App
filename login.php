@@ -1,3 +1,5 @@
+<?php include('server.php'); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,31 +25,27 @@
     <main>
     <div class="pageWrap">
         <section id="signupForm">
-            <form action="newUser.php" method="POST">
+            <form method="POST" action="login.php">
+            <?php
+                include('errors.php');
+            ?>
                 <fieldset>
-                    <legend>Register</legend>
+                    <legend>Login</legend>
                     <div>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" placeholder="Required" name="name" required>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Required" name="username" required>
                     </div>
                     <div>
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" placeholder="Required" name="email" required>
+                        <label for="confirmed_password">Password:</label>
+                        <input type="password" id="confirmed_password" placeholder="Required" name="confirmed_password" required>
                     </div>
-                    <div>
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" placeholder="Required" name="initialPassword" required>
-                    </div>
-                    <div>
-                        <label for="confirmedPassword">Email Address:</label>
-                        <input type="password" id="confirmedPassword" placeholder="Required" name="confirmedPassword" required>
-                    </div>
-                    <button type="submit">Register</button>
+                    <button type="submit" name="login_user">Login</button>
+                    <p>Not yet a user? <a href="register.php">Register</a></p>
                 </fieldset>
             </form>
         </section>
         <article id="homeQuote">
-            <blockquote cite=""><p>"An inspirational daily quote will go here"</p></blockquote>
+            <blockquote cite=""><p>"Daily quote will go here"</p></blockquote>
             <cite>– Bob, Bobs Greatest Hits</cite>
         </article>
     </div>
@@ -57,6 +55,5 @@
         <span>Bradley Murchison &copy;2018</span>
         </div>
     </footer>
-<script src="main.js"></script>
 </body>
 </html>
