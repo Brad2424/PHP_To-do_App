@@ -1,3 +1,5 @@
+<!-- HELPER VIDEO https://www.youtube.com/watch?v=xb8aad4MRx8 -->
+
 <?php 
 
 // call the open and read session save handlers (built-in save handler provided by default).
@@ -76,7 +78,7 @@ if (isset($_POST['login_user'])) {
 
         $row = mysqli_fetch_assoc($result);
 
-        if (mysqli_num_rows($result) == 1 {
+        if (mysqli_num_rows($result) == 1) {
             $psw_hash_check = password_verify($password, $row['password']);
             if ($psw_hash_check == true) {
                 $_SESSION['id'] = $row['id'];
@@ -88,10 +90,11 @@ if (isset($_POST['login_user'])) {
                 array_push($errors, "Wrong username/password combination");
                 // exit();
             }
-        } else {
+        }
+        else {
             array_push($errors, "Wrong username/password combination");
             // exit();
         }
-    }
+    }   
 }
 ?>

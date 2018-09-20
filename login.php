@@ -33,11 +33,11 @@
                     <legend>Login</legend>
                     <div>
                         <label for="username">Username:</label>
-                        <input type="text" id="username" placeholder="Required" name="username" required>
+                        <input type="text" id="username" placeholder="Required" name="username">
                     </div>
                     <div>
                         <label for="password">Password:</label>
-                        <input type="password" id="password" placeholder="Required" name="password" required>
+                        <input type="password" id="password" placeholder="Required" name="password">
                     </div>
                     <button type="submit" name="login_user">Login</button>
                     <p>Not yet a user? <a href="register.php">Register</a></p>

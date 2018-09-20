@@ -33,19 +33,19 @@
                     <legend>Register</legend>
                     <div>
                         <label for="username">Username:</label>
-                        <input type="text" id="username" placeholder="Required" name="username" value="<?php echo $username; ?>" required>
+                        <input type="text" id="username" placeholder="Required" name="username" value="<?php echo $username; ?>">
                     </div>
                     <div>
                         <label for="email">Email Address:</label>
-                        <input type="email" id="email" placeholder="Required" name="email" value="<?php echo $email; ?>" required>
+                        <input type="email" id="email" placeholder="Required" name="email" value="<?php echo $email; ?>">
                     </div>
                     <div>
                         <label for="password1">Password:</label>
-                        <input type="password" id="password1" placeholder="Required" name="password1" required>
+                        <input type="password" id="password1" placeholder="Required" name="password1">
                     </div>
                     <div>
                         <label for="confirmed_password">Confirm Password:</label>
-                        <input type="password" id="confirmed_password" placeholder="Required" name="confirmed_password" required>
+                        <input type="password" id="confirmed_password" placeholder="Required" name="confirmed_password">
                     </div>
                     <button type="submit" name="reg_user">Register</button>
                     <p>Already a user? <a href="login.php">Login</a></p>
