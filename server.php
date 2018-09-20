@@ -13,7 +13,7 @@ $email    = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', 'root', 'to_do_registration');
+$db = mysqli_connect('localhost', 'root', '', 'to_do_registration');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -76,15 +76,13 @@ if (isset($_POST['login_user'])) {
         $query = "SELECT * FROM users WHERE username='$username'";
         $result = mysqli_query($db, $query);
 
-        $row = mysqli_fetch_assoc($result);
-
         if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_assoc($result);
             $psw_hash_check = password_verify($password, $row['password']);
+
             if ($psw_hash_check == true) {
                 $_SESSION['id'] = $row['id'];
-                $_SESSION['user'] = $row['username'];
-                $_SESSION['email'] = $row['email'];
-                $_SESSION['success'] = "You are now logged in";
+                $_SESSION['username'] = $row['username'];
                 header('location: index.php');
             } else {
                 array_push($errors, "Wrong username/password combination");
