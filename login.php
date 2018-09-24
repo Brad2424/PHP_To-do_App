@@ -23,12 +23,12 @@
     </div>
     </header>
     <main>
-    <div class="pageWrap">
-        <section id="signupForm">
+    <div class="pageWrap flex-center">
+        <div class="flex-center signupForm">
             <form method="POST" action="login.php">
-            <?php
-                include('errors.php');
-            ?>
+                <?php
+                    include('errors.php');
+                ?>
                 <fieldset>
                     <legend>Login</legend>
                     <div>
@@ -43,16 +43,18 @@
                     <p>Not yet a user? <a href="register.php">Register</a></p>
                 </fieldset>
             </form>
-        </section>
-        <article id="homeQuote">
-            <blockquote cite=""><p>"Daily quote will go here"</p></blockquote>
-            <cite>– Bob, Bobs Greatest Hits</cite>
-        </article>
+        </div>
+        <div class="flex-center">
+            <article class="blockQuote">
+                <blockquote cite=""><p>"Daily quote will go here"</p></blockquote>
+                <cite>– Bob, Bobs Greatest Hits</cite>
+            </article>
+        </div>
     </div>
     </main>
     <footer>
         <div class="pageWrap">
-        <span>Bradley Murchison &copy;2018</span>
+            <span>&copy;2018</span>
         </div>
     </footer>
 </body>

@@ -2,32 +2,23 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%; //to push the footer to the bottom
+h2 {
+    margin-top: 0; //the class .pageWrap takes car of layout with padding instead
+    text-align: center;
 }
-body {
-    display: flex; //to push the footer to the bottom
-    flex-direction: column;
-}
+
 form {
     border: 1px solid black;
     border-radius: 10px;
-    width: 70%;
-    margin: 0 auto;
+    display: inline-block;
     fieldset {
         border: none;
         margin: 10px;
     }
+    h4 {
+        margin-top: 0px;
+    }
 }
 fieldset > div {
     margin: 10px;
-}
-
-.blockQuote {
-    width: 70%;
-    margin: 0 auto;
-}
-.pageWrap {
-    width: 95%;
-    margin: 0 auto;
 }

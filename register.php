@@ -23,14 +23,18 @@
     </div>
     </header>
     <main>
-    <div class="pageWrap">
-        <section id="signupForm">
+    <div class="pageWrap flex-center">
+        <div class="flex-center signupForm">
             <form action="register.php" method="POST">
             <?php
                 include('errors.php');
             ?>
                 <fieldset>
                     <legend>Register</legend>
+                    <div>
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" placeholder="Required" name="first_name" value="<?php echo $first_name; ?>">
+                    </div>
                     <div>
                         <label for="username">Username:</label>
                         <input type="text" id="username" placeholder="Required" name="username" value="<?php echo $username; ?>">
@@ -51,16 +55,18 @@
                     <p>Already a user? <a href="login.php">Login</a></p>
                 </fieldset>
             </form>
-        </section>
-        <article id="homeQuote">
-            <blockquote cite=""><p>"Daily quote will go here"</p></blockquote>
-            <cite>– Bob, Bobs Greatest Hits</cite>
-        </article>
+        </div>
+        <div class="flex-center">
+            <article id="homeQuote">
+                <blockquote cite=""><p>"Daily quote will go here"</p></blockquote>
+                <cite>– Bob, Bobs Greatest Hits</cite>
+            </article>
+        </div>
     </div>
     </main>
     <footer>
         <div class="pageWrap">
-        <span>Bradley Murchison &copy;2018</span>
+        <span>&copy;2018</span>
         </div>
     </footer>
 </body>

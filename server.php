@@ -8,6 +8,7 @@
 session_start();
 
 // initializing variables
+$first_name = "";
 $username = "";
 $email    = "";
 $errors = array();
@@ -18,6 +19,7 @@ $db = mysqli_connect('localhost', 'root', '', 'to_do_registration');
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
     // receive all input values from the form
+    $first_name = mysqli_real_escape_string($db, $_POST['first_name']);
     $username = mysqli_real_escape_string($db, $_POST['username']);
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password1 = mysqli_real_escape_string($db, $_POST['password1']);
@@ -25,6 +27,7 @@ if (isset($_POST['reg_user'])) {
 
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
+    if (empty($first_name)) { array_push($errors, "Name is required"); }
     if (empty($username)) { array_push($errors, "Username is required"); }
     if (empty($email)) { array_push($errors, "Email is required"); }
     if (empty($password1)) { array_push($errors, "Password is required"); }
@@ -50,11 +53,11 @@ if (isset($_POST['reg_user'])) {
     // Finally, register user if there are no errors in the form
     if (count($errors) == 0) {
         $password = password_hash($confirmed_password, PASSWORD_BCRYPT);//hash the password before saving in the database
-        $query = "INSERT INTO users (username, email, password) 
-                    VALUES('$username', '$email', '$password')";
+        $query = "INSERT INTO users (first_name, username, email, password) 
+                    VALUES('$first_name', '$username', '$email', '$password')";
         mysqli_query($db, $query);
         $_SESSION['username'] = $username;
-        $_SESSION['success'] = "You are now logged in";
+        $_SESSION['first_name'] = $first_name;
         header('location: index.php');
     }
 }
@@ -83,15 +86,14 @@ if (isset($_POST['login_user'])) {
             if ($psw_hash_check == true) {
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['username'] = $row['username'];
+                $_SESSION['first_name'] = $row['first_name'];
                 header('location: index.php');
             } else {
                 array_push($errors, "Wrong username/password combination");
-                // exit();
             }
         }
         else {
             array_push($errors, "Wrong username/password combination");
-            // exit();
         }
     }   
 }

@@ -1,65 +1,85 @@
 * {
   box-sizing: border-box; }
 
-html, body {
-  height: 100%; }
-
-body {
-  display: flex;
-  flex-direction: column; }
+h2 {
+  margin-top: 0;
+  text-align: center; }
 
 form {
   border: 1px solid black;
   border-radius: 10px;
-  width: 70%;
-  margin: 0 auto; }
+  display: inline-block; }
   form fieldset {
     border: none;
     margin: 10px; }
+  form h4 {
+    margin-top: 0px; }
 
 fieldset > div {
   margin: 10px; }
 
-.blockQuote {
-  width: 70%;
-  margin: 0 auto; }
-
 .pageWrap {
   width: 95%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 100%; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .flex-center {
+      flex-direction: row; } }
+
+.error {
+  color: red; }
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr 40px;
+  grid-template-areas: "header" "main" "footer"; }
 
 main {
-  flex: 1; }
-
-main .pageWrap {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: center; }
-  @media (min-width: 1200px) {
-    main .pageWrap {
-      flex-direction: row;
-      order: 1; } }
-
-#signupForm {
-  flex: 1; }
-  @media (min-width: 1200px) {
-    #signupForm {
-      order: 1; } }
-
-#homeQuote {
-  flex: 1; }
-  #homeQuote blockquote, #homeQuote cite {
-    width: 70%;
-    margin: 0 auto;
-    display: block; }
+  grid-area: main; }
 
 header {
-  border-bottom: 1px black solid; }
-  header span {
-    padding: 10px;
-    display: inline-block; }
+  grid-area: header; }
 
+footer {
+  grid-area: footer; }
+
+main .pageWrap {
+  padding: 10px 0;
+  position: relative; }
+  main .pageWrap > div {
+    flex: 1;
+    text-align: center; }
+  main .pageWrap .welcome {
+    position: absolute;
+    top: 10px; }
+
+@media (min-width: 768px) {
+  div.signupForm {
+    order: 1; } }
+
+table.tasks {
+  flex: 1;
+  align-self: start; }
+
+header {
+  height: 100%;
+  border-bottom: 1px black solid; }
+  header .pageWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+nav span {
+  padding: 10px;
+  display: inline-block; }
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -72,7 +92,12 @@ nav ul {
       padding: 10px; }
 
 footer {
-  border-top: 1px black solid;
-  text-align: center; }
+  height: 100%;
+  text-align: center;
+  border-top: 1px black solid; }
+  footer .pageWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */

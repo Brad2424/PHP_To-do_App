@@ -1,0 +1,19 @@
+.pageWrap {
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include mq(medium) {
+        flex-direction: row;
+    }
+}
+
+.error {
+    color: red;
+}

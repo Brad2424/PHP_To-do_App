@@ -1,0 +1,22 @@
+// this grid is for overall page layout
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+// grid areas for overall page layout
+main {
+    grid-area: main;
+}
+header {
+    grid-area: header;
+}
+footer {
+    grid-area: footer;
+}
