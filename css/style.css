@@ -5,6 +5,9 @@ h2 {
   margin-top: 0;
   text-align: center; }
 
+caption {
+  font-size: 2rem; }
+
 form {
   border: 1px solid black;
   border-radius: 10px;

@@ -1,5 +1,7 @@
+<!-- main page access and logout -->
 <?php 
   session_start(); 
+  $username = $_SESSION['username'];
 
   //if the user tries to go directly to index.php without loggin in
   if (!isset($_SESSION['username'])) {
@@ -57,14 +59,10 @@
 						<th>Priority</th>
 						<th>Day Entered</th>
 					</tr>
-					<tr>
-						<td>Jill</td>
-						<td>Smith</td> 
-						<td>50</td>
-					</tr>
+					<?php include 'server-main.php'; ?>
 				</table>
 			<!-- form to enter in new tasks -->
-				<form class="new-tasks" action="register.php" method="POST">
+				<form class="new-tasks" action="index.php" method="POST">
 					<fieldset>
 					<h4>Enter a New Task</h4>
 					<div>
@@ -76,8 +74,14 @@
 						<input type="text" id="due_date" name="due_date">
 					</div>
 					<div>
-						<label for="priority">Priority(1-5):</label>
-						<input type="email" id="priority" name="priority" placeholder="5 is the highest priority">
+						<label for="priority">Priority(5 = high priority):</label>
+						<select id="priority" name="priority">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
 					</div>
 					<button type="submit" name="add_task">Add Task</button>
 					</fieldset>

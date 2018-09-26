@@ -1,4 +1,4 @@
-<?php include('server.php'); ?>
+<?php include('server-registration-login.php'); ?>
 
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,7 @@
         <div class="flex-center signupForm">
             <form method="POST" action="login.php">
                 <?php
-                    include('errors.php');
+                    include 'errors.php';
                 ?>
                 <fieldset>
                     <legend>Login</legend>

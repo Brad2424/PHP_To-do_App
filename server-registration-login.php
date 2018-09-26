@@ -1,10 +1,7 @@
-<!-- HELPER VIDEO https://www.youtube.com/watch?v=xb8aad4MRx8 -->
-
 <?php 
 
 // call the open and read session save handlers (built-in save handler provided by default).
-// creates a session or resumes the current one based on a session identifier passed via a GET or POST
-// request, or passed via a cookie.
+// creates a session or resumes the current one based on a session identifier passed via a GET or POST request, or passed via a cookie.
 session_start();
 
 // initializing variables
@@ -46,7 +43,7 @@ if (isset($_POST['reg_user'])) {
             array_push($errors, "Username already exists");
         }
         if ($user['email'] === $email) {
-        array_push($errors, "email already exists");
+            array_push($errors, "email already exists");
         }
     }
 
