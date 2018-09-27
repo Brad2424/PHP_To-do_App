@@ -1,6 +1,7 @@
 header {
     height: 100%; // to take up entire gird-area
-    border-bottom: 1px black solid;
+    border-bottom: 2px $border-color solid;
+    background-color: $secondary-color;
     .pageWrap {
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@ nav {
     span {
         padding: 10px;
         display: inline-block;
+        color: $secondary-font-color;
     }
     ul {
         list-style-type: none;

@@ -1,16 +1,20 @@
 // STYLES FOR LOGIN AND REGISTER PAGES //
-main .pageWrap {
+main {
+    background-color: $primary-color;
+    .pageWrap {
     padding: 10px 0;
     position: relative;
-    > div {
-        flex: 1;
-        text-align: center;
-    }
-    .welcome {
-        position: absolute;
-        top: 10px;
+        > div {
+            flex: 1;
+            text-align: center;
+        }
+        .welcome {
+            position: absolute;
+            top: 10px;
+        }
     }
 }
+
 div.signupForm {
     @include mq(medium) {
         order: 1;
@@ -21,4 +25,14 @@ div.signupForm {
 table.tasks {
     flex: 1;
     align-self: start;
+    th {
+        color: $secondary-font-color;
+    }
+    td {
+        color: $primary-font-color;
+    }
+}
+
+form.new-tasks {
+    color: $secondary-font-color;
 }

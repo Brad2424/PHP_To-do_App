@@ -1,7 +1,9 @@
 footer {
     height: 100%; // to take up entire gird-area
     text-align: center;
-    border-top: 1px black solid;
+    border-top: 2px $border-color solid;
+    background-color: $secondary-color;
+    color: $secondary-font-color;
     .pageWrap {
         display: flex;
         flex-direction: column;

@@ -5,14 +5,20 @@
 h2 {
     margin-top: 0; //the class .pageWrap takes car of layout with padding instead
     text-align: center;
+    color: $secondary-font-color;
+}
+
+a {
+    color: $secondary-font-color;
 }
 
 caption {
     font-size: 2rem;
+    color: $secondary-font-color;
 }
 
 form {
-    border: 1px solid black;
+    border: 2px $border-color solid;
     border-radius: 10px;
     display: inline-block;
     fieldset {

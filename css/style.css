@@ -3,13 +3,18 @@
 
 h2 {
   margin-top: 0;
-  text-align: center; }
+  text-align: center;
+  color: #dddddd; }
+
+a {
+  color: #dddddd; }
 
 caption {
-  font-size: 2rem; }
+  font-size: 2rem;
+  color: #dddddd; }
 
 form {
-  border: 1px solid black;
+  border: 2px #ce8a41 solid;
   border-radius: 10px;
   display: inline-block; }
   form fieldset {
@@ -54,15 +59,17 @@ header {
 footer {
   grid-area: footer; }
 
-main .pageWrap {
-  padding: 10px 0;
-  position: relative; }
-  main .pageWrap > div {
-    flex: 1;
-    text-align: center; }
-  main .pageWrap .welcome {
-    position: absolute;
-    top: 10px; }
+main {
+  background-color: #467846; }
+  main .pageWrap {
+    padding: 10px 0;
+    position: relative; }
+    main .pageWrap > div {
+      flex: 1;
+      text-align: center; }
+    main .pageWrap .welcome {
+      position: absolute;
+      top: 10px; }
 
 @media (min-width: 768px) {
   div.signupForm {
@@ -71,10 +78,18 @@ main .pageWrap {
 table.tasks {
   flex: 1;
   align-self: start; }
+  table.tasks th {
+    color: #dddddd; }
+  table.tasks td {
+    color: #ffc878; }
+
+form.new-tasks {
+  color: #dddddd; }
 
 header {
   height: 100%;
-  border-bottom: 1px black solid; }
+  border-bottom: 2px #ce8a41 solid;
+  background-color: #326432; }
   header .pageWrap {
     display: flex;
     flex-direction: column;
@@ -82,7 +97,8 @@ header {
 
 nav span {
   padding: 10px;
-  display: inline-block; }
+  display: inline-block;
+  color: #dddddd; }
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -97,7 +113,9 @@ nav ul {
 footer {
   height: 100%;
   text-align: center;
-  border-top: 1px black solid; }
+  border-top: 2px #ce8a41 solid;
+  background-color: #326432;
+  color: #dddddd; }
   footer .pageWrap {
     display: flex;
     flex-direction: column;
